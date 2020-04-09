@@ -1,0 +1,76 @@
+mkdir sandwich
+cd sandwich
+
+#init rep
+git init
+
+#add remote to decentralized rep
+git remote add origin https://githuc.com/alexisLF/sandwich.git
+
+vi burger.txt
+
+#track file burger.txt
+git add burger.txt
+
+#check status
+git status
+
+#show differences
+git diff
+
+#commit file
+git commit -m "add burger file"
+
+git status
+
+#show the commit logs
+git log
+	commit 4f5f4b8b00b17cf5e81614f0580c4e79acade490
+	Author: AlexisLF <alexislefort.14@gmail.com>
+	Date:   Thu Apr 9 11:30:15 2020 +0200
+
+	    add burger file
+
+
+vi kebab.txt
+
+git add kebab.txt
+
+git commit -m "add kebab"
+
+... #repeat for the 5 commits
+
+#See changes
+git status
+git show
+
+#change kebab
+vi kebab.txt
+
+git add kebab.txt
+
+#check if add to index
+git status
+
+#undo add
+git reset kebab.txt
+
+#revert change on kebab.txt
+git checkout -- kebab.txt
+
+
+#revert to the last version 
+git checkout --
+
+#Git commit sans message
+$ git commit
+error: cannot spawn npp.bat: No such file or directory
+error: unable to start editor 'npp.bat'
+Please supply the message using either -m or -F option.
+
+#avec GitFork sans message je ne peux pas commit
+
+
+
+#push to master on Origin
+git push -u origin master
